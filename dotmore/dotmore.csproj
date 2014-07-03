@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{5F27946C-6271-415F-9219-ABAC0BD3B535}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>dotmore</RootNamespace>
+    <AssemblyName>dotmore</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Collections\Generic\Comparer2.cs" />
+    <Compile Include="Collections\Generic\DictionaryEnumerator.cs" />
+    <Compile Include="Collections\Generic\EnumerableEqualityComparer.cs" />
+    <Compile Include="Collections\Generic\EnumerableExtensions.cs" />
+    <Compile Include="Collections\Generic\EqualityComparer2.cs" />
+    <Compile Include="Collections\Generic\IOrderedDictionary.cs" />
+    <Compile Include="Collections\Generic\IPagedList.cs" />
+    <Compile Include="Collections\Generic\KeyedCollection2.cs" />
+    <Compile Include="Collections\Generic\KeyValueComparisonHelper.cs" />
+    <Compile Include="Collections\Generic\LazyList.cs" />
+    <Compile Include="Collections\Generic\OrderedDictionary.cs" />
+    <Compile Include="Collections\Generic\PagedList.cs" />
+    <Compile Include="Collections\Generic\QuackingDictionary.cs" />
+    <Compile Include="Collections\Generic\TreeNode.cs" />
+    <Compile Include="Diagnostics\OrderedDictionaryDebug.cs" />
+    <Compile Include="Extensions\BooleanExtensions.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="Extensions\IComparableExtensions.cs" />
+    <Compile Include="Extensions\Int32Extensions.cs" />
+    <Compile Include="Extensions\StringBuilderExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Text\RegularExpressions\RegexExtensionMethods.cs" />
+    <Compile Include="Text\RegularExpressions\RegexHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Collections" />
+    <Folder Include="Collections\Generic" />
+    <Folder Include="Diagnostics" />
+    <Folder Include="Extensions" />
+    <Folder Include="Text" />
+    <Folder Include="Text\RegularExpressions" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
